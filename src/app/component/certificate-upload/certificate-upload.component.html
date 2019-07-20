@@ -1,0 +1,26 @@
+<div [formGroup]="form">
+    <input type="file" (change)="fileChange($event)">
+    <div *ngIf="certData">
+        <p>Cert data</p>
+
+        <div>
+            <span class="title">SN:</span>
+            <span>{{certData.serialNumber}}</span>
+        </div>
+
+        <div>
+            <span class="title">Issuer:</span>
+            <span>{{certData.validityDate}}</span>
+        </div>
+
+        <div>
+            <span class="title">Validity date:</span>
+            <span>{{certData.serialNumber}}</span>
+        </div>
+
+        <div>
+            <span class="title">OCSP check:</span>
+            <span>{{certData.ocspCheck}}</span>
+        </div>
+    </div>
+</div>
